@@ -8,6 +8,26 @@
 </head>
 <body>
     <style>
+        :root {
+            --navbar-height: 2rem;
+            --debug-border-size: 1px;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            /* display: flex;
+            flex-direction: column;
+            align-items: center; */
+        }
+
+        body * {
+            margin: var(--debug-border-size);
+            padding: var(--debug-border-size);
+            border: var(--debug-border-size) solid blue;
+        }
+
         @media (max-width: 600px) { /* user story 9 */
             #projects {
                 display: flex;
@@ -16,30 +36,69 @@
         }
 
         #welcome-section { /* user story 10 */
+             /* height: calc(100vh - 0 * var(--debug-border-size));
+            max-height: calc(100vh - 0 * var(--debug-border-size)); */
             height: 100vh;
+            display: grid;
+            place-items: center;
         }
 
         #navbar { /* user story 12 */
+            border-color: red;
             position: fixed;
             top: 0;
+            /*width: 100%; */
+            left: 0;
+            right: 0;
+            height: var(--navbar-height);
+            padding: 0 .5rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 2;
+        }
+
+        #navbar #links {
+            height: auto;
+            display: flex;
+        }
+
+        #navbar #links a {
+            align-self: stretch;
+            align-content: center;
+            margin: 0 .5rem;
+        }
+
+        .content-wrap {
+            margin-top: var(--navbar-height);
         }
     </style>
 
+    <nav id="navbar"> <!-- user story 6 -->
+        <div>LOGO</div>
+        <div id="links">
+            <a href="#about">About</a> <!-- user story 7 -->
+            <a href="#projects">Projects</a> <!-- user story 7 -->
+            <a href="#contact">Contact me</a> <!-- user story 7 -->
+        </div>
+    </nav>
+
+    <div class="content-wrap"></div>
+
     <section id="welcome-section"> <!-- user story 1 -->
-        <h1>Name</h1> <!-- user story 2 -->
+        <h1>Hi, I am David Assigbi</h1> <!-- user story 2 -->
     </section>
 
     <section id="projects"> <!-- user story 3 -->
         <div class="project-tile"> <!-- user story 4 -->
-            <a href="#"></a> <!-- user story 5 -->
+            Project name <br />
+            <a href="#">Project link</a> <!-- user story 5 -->
         </div>
     </section>
 
-    <nav id="navbar"> <!-- user story 6 -->
-        <a href="#projects"></a> <!-- user story 7 -->
-    </nav>
-
-    <a target="_blank" href="https://github.com/davidassigbi" id="profile-link"></a><!-- user story 8 -->
+    <footer id="footer">
+        <a target="_blank" href="https://github.com/davidassigbi" id="profile-link">github profile link</a><!-- user story 8 -->
+    </footer>
 
     <script src="index.js"></script>
     <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
