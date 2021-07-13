@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal portfolio</title>
+</head>
+<body>
+    <style>
+        @media (max-width: 600px) { /* user story 9 */
+            #projects {
+                display: flex;
+                flex-direction: column;
+            }
+        }
+
+        #welcome-section { /* user story 10 */
+            height: 100vh;
+        }
+
+        #navbar { /* user story 12 */
+            position: fixed;
+            top: 0;
+        }
+    </style>
+
+    <section id="welcome-section"> <!-- user story 1 -->
+        <h1>Name</h1> <!-- user story 2 -->
+    </section>
+
+    <section id="projects"> <!-- user story 3 -->
+        <div class="project-tile"> <!-- user story 4 -->
+            <a href="#"></a> <!-- user story 5 -->
+        </div>
+    </section>
+
+    <nav id="navbar"> <!-- user story 6 -->
+        <a href="#projects"></a> <!-- user story 7 -->
+    </nav>
+
+    <a target="_blank" href="https://github.com/davidassigbi" id="profile-link"></a><!-- user story 8 -->
+
+    <script src="index.js"></script>
+    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+</body>
+</html>
