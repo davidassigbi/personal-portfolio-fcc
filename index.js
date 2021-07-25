@@ -19,7 +19,7 @@ socialLinks.forEach(link => {
     </a>`
 })
 
-const createProject = (href, imageSource, text, id=null, imageAlt = "Project image") => ({href, imageSource, imageAlt, text})
+const createProject = (href, imageSource, text, imageAlt = "Project image") => ({href, imageSource, imageAlt, text})
 
 const projects = [
     createProject("https://davidassigbi.github.io/freecodecamp-tribute-page", "images/fcc_nelson_mandela.jpg", "Nelson mandela tribute"),
